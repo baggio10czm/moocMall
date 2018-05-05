@@ -56,9 +56,6 @@ const config = {
             }
         }
     },
-    devServer: {
-        // contentBase: './dist/view',
-    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
