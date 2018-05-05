@@ -1,0 +1,29 @@
+{
+  "name": "moocmall",
+  "version": "1.0.0",
+  "author": "Czm",
+  "description": "模仿慕课网教程\r 前后端分离开发电商平台—前端",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baggio10czm/moocMall.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baggio10czm/moocMall/issues"
+  },
+  "homepage": "https://github.com/baggio10czm/moocMall#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --open --port 7777 --hot --mode development"
+  },
+  "dependencies": {
+    "webpack": "^4.7.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "style-loader": "^0.21.0",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
