@@ -15,9 +15,11 @@
   "homepage": "https://github.com/baggio10czm/moocMall#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --port 7777 --content-base ./dist/view/  --hot --mode development"
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production "
   },
   "dependencies": {
+    "hogan": "^1.0.2",
     "webpack": "^4.7.0"
   },
   "devDependencies": {
