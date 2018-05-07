@@ -8,5 +8,6 @@
 'use strict';
 
 require('./layout.css');
+// 必须这样引用才有效
 require('node_modules/font-awesome/css/font-awesome.min.css');
-require('./footer/index.css');
+// require('./footer/index.css');
