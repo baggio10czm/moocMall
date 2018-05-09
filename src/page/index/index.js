@@ -1,3 +1,6 @@
-require('../module')
+require('../module.js')
 require('./index.css')
-alert("Czm  index");
+
+let _mm = require('util/mm.js');
+_mm.successTips();
+$('body').html('hello world!');

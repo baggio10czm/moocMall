@@ -1,5 +1,5 @@
 
-const Hogan = require('hogan');
+const Hogan = require('hogan.js');
 let conf = {
     serverHost : ''
 };
@@ -74,3 +74,5 @@ let _mm = {
         window.location.href = './index.html';
     }
 };
+
+module.exports = _mm;

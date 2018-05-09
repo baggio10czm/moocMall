@@ -35,6 +35,7 @@ var config = {
     entry: {
         'common'            : './src/page/common/index.js',
         'index'             : './src/page/index/index.js',
+        'cat'              : './src/page/cat/cat.js',
         //'list'              : './src/page/list/index.js',
         //'detail'            : './src/page/detail/index.js',
         //'cart'              : './src/page/cart/index.js',
@@ -167,6 +168,7 @@ var config = {
         new ExtractTextPlugin("css/[name].css"),
         // html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('cat', 'cat')),
         //new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表')),
         //new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情')),
         //new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
