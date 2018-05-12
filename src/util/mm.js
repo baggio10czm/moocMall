@@ -20,7 +20,6 @@ let _mm = {
                 }else if(1 === res.status){
                     typeof param.error === 'function' && param.error(res.msg);
                 }
-
             },
             error:function (err) {
                 typeof param.error === 'function' && param.error(err.statusText);
@@ -31,7 +30,7 @@ let _mm = {
     getServerUrl (path){
         return conf.serverHost + path;
     },
-    getUrlParam( ){
+    getUrlParam(name){
         let reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         let result  = window.location.search.substr(1).match(reg);
         return result ? decodeURIComponent(result[2]) : null;

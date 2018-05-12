@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>首页</title>
+    <%= require('html-loader!./layout/head-common.html')  %>
+    <title>电商平台</title>
 </head>
 <body>
-<p>safsa</p>
-<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<a class="link"> A标签</a>
+<a class="link-text">跟A标签样式的</a>
+<a href="#" class="btn">按钮样式</a>
+<a href="#" class="btn btn-mini">小按钮样式</a>
+<div class="loading"></div>
+<p>图标测试：<i class='fa fa-user'></i></p>
+<%= require('html-loader!./layout/footer.html')  %>
 </body>
 </html>
