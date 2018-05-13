@@ -1,20 +1,8 @@
-require('../module.js')
-require('./index.css')
-
+require('page/common/header/index.js');
+require('page/common/nav/index.js');
+let navSide = require('page/common/nav-side/index.js');
 let _mm = require('util/mm.js');
-//_mm.request({
-//    url:'/product/list.do?keyword=1',
-//    success:function (res) {
-//        console.log(res);
-//    },
-//    error:function (error) {
-//        console.log(error);
-//    }
-//})
-console.log(_mm.getUrlParam('name'));
 
-var html = '<div>{{data}}</div>';
-var data = {
-    data:6662
-}
-console.log(_mm.renderHtml(html,data));
+navSide.init({
+    name : 'about'
+})
