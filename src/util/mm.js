@@ -67,7 +67,7 @@ let _mm = {
     },
     // 统一登录处理
     doLogin() {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href)
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href)
     },
     goHome : function(){
         window.location.href = './index.html';
