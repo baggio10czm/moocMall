@@ -8,6 +8,7 @@ var _order          = require('service/order-service.js');
 var _address          = require('service/address-service.js');
 var templateAddress  = require('./address-list.string');
 var templateProduct   = require('./product-list.string');
+var addressModal   = require('./address-modal.js');
 
 var page = {
     data : {
@@ -23,9 +24,32 @@ var page = {
     },
     bindEvent : function(){
         var _this = this;
-        // 商品的选择 / 取消选择
-        $(document).on('click', '.cart-select', function(){
-
+        // 地址选择
+        $(document).on('click', '.address-item', function(){
+            $(this).addClass('active').siblings('.address-item').removeClass('active');
+            _this.data.selectedAddressId = $(this).data('id');
+        });
+        // 订单提交
+        $(document).on('click', '.order-submit', function(){
+            var shippingId = _this.data.selectedAddressId;
+            if(shippingId){
+                _order.createOrder({
+                    shippingId:shippingId
+                },function (res) {
+                    window.location.href = './payment.html?orderNumber=' + res.orderNo;
+                })
+            }else {
+                _mm.errorTips("请选择地址")
+            }
+        });
+        // 地址的添加
+        $(document).on('click', '.address-add', function(){
+            addressModal.show({
+                isUpdate:false,
+                onSuccess:function () {
+                    _this.loadAddressList();
+                }
+            })
         });
 
     },

@@ -1,4 +1,4 @@
-.address-item {
+.address-item,.address-add {
     margin: 20px 20px 0 0;
     width: 200px;
     float: left;
@@ -9,7 +9,7 @@
 .address-item.active{
     border:3px dashed #c60023;
 }
-.address-item:hover {
+.address-item:hover,.address-add:hover  {
     background-color: #fafafa;
 }
 .address-item .address-title {
@@ -37,16 +37,16 @@
 .address-item .address-opera .link {
     margin-right: 5px;
 }
-.address-item .address-new {
+.address-add .address-new {
     padding: 8px 12px;
     text-align: center;
     color: #cccccc;
 }
-.address-item .address-new .fa {
+.address-add .address-new .fa {
     font-size: 53px;
     line-height: 53px;
 }
-.address-item .address-new .text {
+.address-add .address-new .text {
     font-size: 12px;
 }
 /*商品清单*/
@@ -99,4 +99,72 @@
 .submit-con .order-submit{
     height: 50px;
     line-height: 50px;
+}
+/*modal*/
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #eee;
+    background-color: rgba(0,0,0,.3);
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal-container {
+    width: 700px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.modal-container .modal-header{
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.modal-container .modal-header .modal-title {
+    font-size: 14px;
+}
+.modal-container .modal-header .close{
+    position: absolute;
+    padding: 10px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.modal-container .modal-body{
+    padding: 15px;
+}
+/*modal form*/
+.form .form-line {
+    margin: 15px 0;
+    overflow: hidden;
+}
+.form .form-line .label{
+    display: block;
+    float: left;
+    width: 80px;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.form .form-line .label .required{
+    color: red;
+}
+.form .form-line .form-item {
+    margin-right: 10px;
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+}
+.form .form-line .btn{
+    margin-left: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
 }
