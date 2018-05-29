@@ -37,7 +37,7 @@
                         <input type="text" name="" class="form-item" id="receiver-zip" placeholder="请输入邮政编码" value="{{data.receiverZip}}">
                     </div>
                     <div class="form-line">
-                    <input type="hidden" id="receiver-id" value="{{data-id}}" />
+                    <input type="hidden" id="receiver-id" value="{{data.id}}" />
                         <a class="btn address-btn">保存收货地址</a>
                     </div>
                 </div>

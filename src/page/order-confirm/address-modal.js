@@ -104,7 +104,7 @@ var addressModal = {
         receiverInfo.receiverAddress = $.trim(this.$modalWrap.find('#receiver-address').val());
         receiverInfo.receiverZip = $.trim(this.$modalWrap.find('#receiver-zip').val());
         if(this.option.isUpdate){
-            receiverInfo.id = this.$modalWrap.find('#receiver-id');
+            receiverInfo.id = this.$modalWrap.find('#receiver-id').val();
         }
         //表单验证
         if (!receiverInfo.receiverName) {
@@ -121,6 +121,7 @@ var addressModal = {
             result.status = true;
             result.data = receiverInfo;
         }
+        console.log(result);
         return result;
     },
     // 生成select  option

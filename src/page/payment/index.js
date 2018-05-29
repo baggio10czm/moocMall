@@ -29,7 +29,7 @@ var page = {
         var _this = this,
             paymentHtml = '',
             $pageWrap = $('.page-wrap');
-        $content.html('<div class="loading"></div>');
+        $pageWrap.html('<div class="loading"></div>');
         _payment.getPaymentInfo(this.data.orderNumber,function (res) {
             //渲染HTML
             paymentHtml = _mm.renderHtml(templateIndex,res);

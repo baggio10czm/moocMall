@@ -32,12 +32,13 @@ var page = {
     },
     bindEvent : function(){
         var _this = this;
-        $(document).on('click','order-cancel',function () {
+        $(document).on('click','.order-cancel',function () {
             if(window.confirm('确定取消？')){
                 _order.cancelOrder(_this.data.orderNumber,function (res) {
                     _mm.successTips('订单取消成功！');
                     _this.loadDetail();
                 },function (errMsg) {
+
                     _mm.errorTips(errMsg);
                 })
             }
