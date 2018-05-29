@@ -49,7 +49,7 @@ var config = {
         'user-center-update'    : './src/page/user-center-update/index.js',
         'user-pass-update'  : './src/page/user-pass-update/index.js',
         'payment'           : './src/page/payment/index.js',
-        //'about'             : './src/page/about/index.js',
+        'about'             : './src/page/about/index.js'
     },
     output: {
         /* 
@@ -181,7 +181,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付')),
-        //new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall'))
     ],
     /* 
     * 【新增】：在v1.0.1版本中新增了devServer的配置，用自带的代理就可以访问接口
