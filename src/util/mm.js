@@ -30,6 +30,7 @@ let _mm = {
     getServerUrl (path){
         return conf.serverHost + path;
     },
+    // 获取URL传值
     getUrlParam(name){
         let reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         let result  = window.location.search.substr(1).match(reg);
@@ -69,6 +70,7 @@ let _mm = {
     doLogin() {
         window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href)
     },
+    // 回首页
     goHome : function(){
         window.location.href = './index.html';
     }
